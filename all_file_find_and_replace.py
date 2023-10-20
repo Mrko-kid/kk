@@ -8,7 +8,7 @@ directory = 'C:/Users/kairn/Music/kk/'
 def replace_in_file(file_path):
     with fileinput.FileInput(file_path, inplace=True) as file:
         for line in file:
-            print(line.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7033703888764854" crossorigin="anonymous"></script>'), end='')
+            print(line.replace('<div class="col-sm-2 ads">\n<p><a href="#">ADS</a></p>\n</div>', '<div class="col-sm-2 ads">\n<p><a href="#">ADS</a></p>\n</div> -->\n'), end='')
 
 # Recursively search for files in the directory
 for foldername, subfolders, filenames in os.walk(directory):
